@@ -1,0 +1,4 @@
+# Code owners of the gate's trusted configuration.
+.github/ @nobu-13
+.iac-remediation/ @nobu-13
+CODEOWNERS @nobu-13
