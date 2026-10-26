@@ -13,6 +13,9 @@ scope:
     - resource: "OrdersTable"
       property: "ProvisionedThroughput"
       operations: ["remove"]
+    - resource: "OrdersTable"
+      property: "KeySchema"
+      operations: ["replace"]
 intent:
   required_outcomes:
     - "billing-mode-consistent"
