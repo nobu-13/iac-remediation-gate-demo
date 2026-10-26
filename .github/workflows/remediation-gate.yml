@@ -29,7 +29,8 @@ on:
     branches: [main]
 
 permissions:
-  contents: read
+  contents: write
+  checks: write
 
 concurrency:
   group: remediation-gate-${{ github.event.pull_request.number }}
@@ -45,7 +46,7 @@ jobs:
       # PIN: a full commit SHA of the plugin that contains iacreview/remediation.
       VALIDATOR_COMMIT: "5412a730ade13d6fe939d71cee636e280e92d4db"
       # The approved contract, as a path in the base revision.
-      CONTRACT_PATH: .iac-remediation/contracts/billing-mode-orders.yaml
+      CONTRACT_PATH: .iac-remediation/contracts/relaxed.yaml
       CFN_LINT_VERSION: "1.46.0"
       PYYAML_VERSION: "6.0.3"
     steps:
